@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Herramienteca - Biblioteca de Herramientas</title>
+    <link rel="shortcut icon" href="../logo/logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <img id="logo" src="../logo/logo.png" alt="logo">
+        <div>
+            <h1>Herramienteca</h1>
+            <p id="sub">Préstamo gratuito de herramientas para la comunidad</p>
+        </div>
+        <table class="menu">
+            <tr class="menu">
+                <th class="enlace"><a href="../index.html">Sobre nosotros</a></th>
+                <th class="enlace"><a href="./prestamo.html">Prestamo de herramientas</a></th>
+                <th class="actual">Quiero participar</th>
+                <th class="enlace"><a href="./donaciones.html">Donaciones</a></th>
+            </tr>
+        </table>
+    </header>
+    <div class="mapa">
+        <iframe id="maps" src="https://osmand.net/map"></iframe>      
+    </div>
+    <div id="formulario">
+        <h2>Contacto</h2>
+        <p>Si quieres donar herramientas o tienes preguntas, contáctanos:</p>
+        <form>
+            <label for="name">Nombre y Apellidos:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Correo:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <p>Selecciona tu ubicación en el mapa (puede ser aproximada)</p><br>
+            <button type="submit">Enviar</button>
+            <label for="log-in" id="log-in" onmouseover="noDisponible(event, 'Esta función no está disponible aún')" onmouseout="fuera()"><u>Ya estoy registrado</u></label>
+        </form>
+    </div>
+    <div id="mensaje" class="mensaje"></div>
+    <script>
+        function noDisponible(event, text) {
+            let mensaje = document.getElementById("mensaje");
+            mensaje.innerText = text
+            mensaje.style.left = event.pageX + 10 + "px";
+            mensaje.style.top = event.pageY + 10 + "px";
+            mensaje.style.display = "block";
+        }
+        function fuera() {
+            document.getElementById("mensaje").style.display = "none";
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2025 Herramienteca - Biblioteca de Herramientas</p>
+</footer>
+</html>

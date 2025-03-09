@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Herramienteca - Biblioteca de Herramientas</title>
+    <link rel="shortcut icon" href="../logo/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="../logo/logo.png" alt="logo">
+        <div>
+            <h1>Herramienteca</h1>
+            <p id="sub">Préstamo gratuito de herramientas para la comunidad</p>
+        </div>
+        <table class="menu">
+            <tr class="menu">
+                <th class="enlace"><a href="../index.html">Sobre nosotros</a></th>
+                <th class="enlace"><a href="./prestamo.html">Prestamo de herramientas</a></th>
+                <th class="enlace"><a href="./participación.html">Quiero participar</a></th>
+                <th class="actual">Donaciones</th>
+            </tr>
+        </table>
+    </header>
+    <div id="donaciones">
+        <h2>Donaciones</h2>
+        <p>
+            Si quieres contribuir con el proyecto de forma monetaria puedes hacerlo aquí, tu dinero contribuirá al
+            mantenimiento de la pagina web
+        </p>
+        <form>
+            <label for="name">Nombre y Apellidos:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="email">Correo:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="cantidad">Cantidad(€)</label><br>
+            <input type="number" id="cantidad" name="cantidad" required><br><br>
+            <button type="submit" onmouseover="noDisponible(event, 'Las donaciones están desactivadas')" onmouseout="fuera()">Enviar</button>
+        </form>
+    </div>
+    <div id="mensaje" class="mensaje"></div>
+    <script>
+        function noDisponible(event, text) {
+            let mensaje = document.getElementById("mensaje");
+            mensaje.innerText = text
+            mensaje.style.left = event.pageX + 10 + "px";
+            mensaje.style.top = event.pageY + 10 + "px";
+            mensaje.style.display = "block";
+        }
+        function fuera() {
+            document.getElementById("mensaje").style.display = "none";
+        }
+    </script>
+</body>
+<footer>
+    <p>&copy; 2025 Herramienteca - Biblioteca de Herramientas</p>
+</footer>
+
+</html>
