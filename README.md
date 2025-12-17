@@ -1,4 +1,4 @@
- 📌 Eco-Invento | La Herramienteca
+## 📌 Eco-Invento | La Herramienteca
 
 La Herramienteca es un proyecto escolar cuyo objetivo es fomentar el consumo responsable y la economía colaborativa mediante una "**biblioteca comunitaria de herramientas"**. La idea principal es permitir que las personas compartan herramientas (carpintería, bricolaje, etc.) para que otros usuarios puedan tomarlas en préstamo, evitando así la compra innecesaria de nuevos productos.
 
